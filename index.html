@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Forecast</h1>
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-btn">Search</button>
+        </div>
+        <div class="loading-animation" id="loading-animation">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+        <div class="weather-info" id="weather-info">
+            <div class="weather-details">
+                <h2 id="city-name"></h2>
+                <div class="temp-container">
+                    <img id="weather-icon" alt="Weather Icon" class="weather-icon">
+                    <div class="temp-details">
+                        <span id="temperature"></span>
+                        <span id="weather-description"></span>
+                    </div>
+                </div>
+                <div class="additional-info">
+                    <div class="info-item">
+                        <i class="fas fa-temperature-low"></i>
+                        <p>Feels Like: <span id="feels-like"></span></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-tint"></i>
+                        <p>Humidity: <span id="humidity"></span></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-wind"></i>
+                        <p>Wind Speed: <span id="wind-speed"></span></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-sun"></i>
+                        <p>UV Index: <span id="uv-index"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="forecast-section" id="forecast-section">
+                <h3>3-Day Forecast</h3>
+                <div class="forecast-container" id="forecast-container"></div>
+            </div>
+        </div>
+        <div id="error-message" class="error-message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
